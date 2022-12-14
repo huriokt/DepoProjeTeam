@@ -1,5 +1,9 @@
 package DepoProje;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 public class UrunlerPojo {
     private String id;
     private String urunIsmi ;
@@ -8,8 +12,12 @@ public class UrunlerPojo {
     private String birim ;
     private String raf;
 
-    public UrunlerPojo() {
-    }
+
+    static Map<String, UrunlerPojo> urunlerListesi = new HashMap<>();
+
+    static Set<Map.Entry<String, UrunlerPojo>> urunDetaylari = urunlerListesi.entrySet();
+
+    static Set<String> idNumaralari = urunlerListesi.keySet();
 
     public UrunlerPojo(String id, String urunIsmi, String uretici, int miktar, String birim, String raf) {
         this.id = String.valueOf(id);

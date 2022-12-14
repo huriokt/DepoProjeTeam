@@ -7,6 +7,7 @@ import static DepoProje.Method.*;
 public class Depo_Giris_Paneli {
 
     static  Scanner input = new Scanner(System.in);
+
     public static void girisPaneli () {
 
         System.out.println("-".repeat(20)+"DEPO ANA SAYFASI"+"-".repeat(20));
@@ -27,31 +28,30 @@ public class Depo_Giris_Paneli {
 
         do {
             switch (secim) {
-                case "1": //"Urun Tanimlama"
+                case "1":
                     urunTanimlama();
                     scm = false;
                     break;
 
-//                case "2": //"Miktar Guncellemesi"
-//                    miktarGuncelleme();
-//                    scm = false;
-//                    break;
-//
-//                case "3"://"Raf Guncelleme"
-//                    rafGuncelleme();
-//                    scm = false;
-//                    break;
-//                case "4"://"Urun Cikisi"
-//                    urunCikisi();
-//                    scm = false;
-//                    break;
-                case "5"://"Urun Listeleme"
+                case "2":
+                    miktarGuncelleme();
+                    scm = false;
+                    break;
+
+                case "3":
+                    rafGuncelleme();
+                    scm = false;
+                    break;
+                case "4":
+                    urunCikisi();
+                    scm = false;
+                    break;
+                case "5":
                     urunListeleme();
                     scm = false;
                     break;
-                case "6"://"Cikis"
-                    System.out.println("Depo islemleri uygulamasini kullandiginiz icin tesekkur ederiz\n" +
-                            "Iyi Gunler Dileriz");
+                case "6":
+                   cikis();
                     scm = false;
                     break;
                 default:
